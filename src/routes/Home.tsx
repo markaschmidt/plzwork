@@ -6,11 +6,14 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 p-8">
-      <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-8">
-        <h1 className="text-3xl font-bold text-gray-800 mb-6">Welcome to the Homepage</h1>
-        <p className="text-gray-600 mb-4">This is the current state of the homepage.</p>
-        <p className="text-gray-600">The application is properly routed and ready for content.</p>
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold text-gray-800 mb-6">Welcome to Our Website</h1>
+        <p className="text-lg text-gray-600 mb-8">This is the homepage. Content will be added soon.</p>
+        <div className="bg-white p-6 rounded-lg shadow-md">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-4">Current Status</h2>
+          <p className="text-gray-600">The website is under active development. Check back soon for updates!</p>
+        </div>
       </div>
     </div>
   );
