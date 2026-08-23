@@ -1,61 +1,13 @@
-:root {
-  color-scheme: dark;
-  --bg: #0b1020;
-  --fg: #eef2ff;
-  --muted: #9aa6c2;
-  --accent: #6ee7b7;
-  --panel: #121933;
-  font-family: "Segoe UI", system-ui, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px #ff4500; }
+  50% { box-shadow: 0 0 20px #ff4500, 0 0 30px #ff4500; }
+  100% { box-shadow: 0 0 5px #ff4500; }
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  background:
-    radial-gradient(1200px 600px at 10% -10%, #1d2b57 0%, transparent 55%),
-    radial-gradient(900px 500px at 100% 0%, #143528 0%, transparent 50%),
-    var(--bg);
-  color: var(--fg);
-}
-
-.page {
-  max-width: 42rem;
-  margin: 0 auto;
-  padding: 4.5rem 1.5rem;
-}
-
-.eyebrow {
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  color: var(--accent);
-  margin: 0 0 0.75rem;
-}
-
-h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  line-height: 1.1;
-  margin: 0 0 1rem;
-}
-
-.lede {
-  color: var(--muted);
-  font-size: 1.05rem;
-  line-height: 1.55;
-  margin: 0 0 1.5rem;
-}
-
-.hint {
-  display: inline-block;
-  margin: 0;
-  padding: 0.7rem 0.9rem;
-  border: 1px solid #2a365f;
-  border-radius: 0.75rem;
-  background: color-mix(in srgb, var(--panel) 90%, black);
-  color: #c7d2fe;
-  font-size: 0.92rem;
+.shadow-glow {
+  animation: glow 1.5s infinite;
 }
