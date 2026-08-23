@@ -4,14 +4,14 @@ type SubscriptionTier = 'free' | 'premium' | 'deluxe';
 
 interface SubscriptionState {
   currentTier: SubscriptionTier;
-  setTier: (tier: SubscriptionTier) => void;
+  subscribe: (tier: SubscriptionTier) => void;
+  unsubscribe: () => void;
 }
 
-const useSubscriptionStore = create<SubscriptionState>((set) => ({
+export const useSubscriptionStore = create<SubscriptionState>((set) => ({
   currentTier: 'free',
-  setTier: (tier) => set({ currentTier: tier }),
+  subscribe: (tier) => set({ currentTier: tier }),
+  unsubscribe: () => set({ currentTier: 'free' }),
 }));
-
-export { useSubscriptionStore };
 
 export type { SubscriptionTier };
